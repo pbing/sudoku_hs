@@ -25,7 +25,7 @@ main = do
   time1 <- getCPUTime
   
   -- calculate statistics
-  let dt = ((fromInteger (time1 - time0)) * (1.0e-12 :: Double)) / (fromIntegral n0)
+  let dt = (fromInteger (time1 - time0) * (1.0e-12 :: Double)) / fromIntegral n0
   let f = 1.0 / dt
   putStrLn $ "Solved " <> show n1 <> " of " <> show n0 <> " puzzles (avg. " <> show dt <> " secs (" <> show f <> " Hz))."
   
