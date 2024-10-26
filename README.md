@@ -19,7 +19,8 @@ Benchmarks where run on an Apple M1 Pro Macbook Pro with 32 GB RAM.
 
 ### Python
 ```shell
-% python3 sudoku.py
+cd python
+python3 sudoku.py
 All tests pass.
 Solved 50 of 50 easy puzzles (avg 0.00 secs (544 Hz), max 0.00 secs).
 Solved 95 of 95 hard puzzles (avg 0.01 secs (167 Hz), max 0.03 secs).

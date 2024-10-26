@@ -158,6 +158,6 @@ if __name__ == '__main__':
     solve_all(open("sudoku-easy50.txt"), "easy")
     solve_all(open("sudoku-top95.txt"), "hard")
     solve_all(open("sudoku-hardest.txt"), "hardest")
-    solve_all(open("sudoku-10k.txt"), "grids10k")
+    #solve_all(open("sudoku-10k.txt"), "grids10k")
     #solve_all(open("sudoku-250k.txt"), "grids250k")
     
