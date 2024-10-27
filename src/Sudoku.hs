@@ -1,4 +1,4 @@
-module Sudoku (Grid, blank, solve) where
+module Sudoku (Grid, blank, chop, solve) where
 
 import Data.List
 
