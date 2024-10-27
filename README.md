@@ -25,6 +25,7 @@ All tests pass.
 Solved 50 of 50 easy puzzles (avg 0.00 secs (544 Hz), max 0.00 secs).
 Solved 95 of 95 hard puzzles (avg 0.01 secs (167 Hz), max 0.03 secs).
 Solved 11 of 11 hardest puzzles (avg 0.00 secs (447 Hz), max 0.00 secs).
+Solved 10000 of 10000 grids10k puzzles (avg 0.00 secs (510 Hz), max 0.04 secs).
 ```
 
 ### Haskell
@@ -37,13 +38,16 @@ Solved 95 of 95 puzzles (avg. 0.5373875789473684 secs (1.8608543240965747 Hz)).
 
 cabal run exe:sudoku-hs -- python/sudoku-hardest.txt
 Solved 11 of 11 puzzles (avg. 1.5199363636363638e-2 secs (65.79222814352275 Hz)).
+
+cabal run exe:sudoku-hs -- python/sudoku-10k.txt
+Solved 10000 of 10000 puzzles (avg. 1.1594253929 secs (0.8624962038296927 Hz)).
 ```
 
 ### Averaged
 |           | Python | Haskell |
 |-----------|--------|---------|
-| time      | 0.003  | 0.185   |
-| frequency | 298    | 5.398   |
+| time      | 0.003  | 0.429   |
+| frequency | 332.7  | 2.332   |
 
 ## References
 * <https://wiki.haskell.org/Sudoku>
