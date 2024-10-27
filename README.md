@@ -30,22 +30,23 @@ Solved 11 of 11 hardest puzzles (avg 0.00 secs (447 Hz), max 0.00 secs).
 ### Haskell
 ```shell
 cabal run exe:sudoku-hs -- python/sudoku-easy50.txt
-Solved 50 of 50 puzzles (avg. 5.93608e-3 secs (168.46134149135457 Hz)).
+Solved 50 of 50 puzzles (avg. 3.22368e-3 secs (310.20448679769703 Hz)).
 
 cabal run exe:sudoku-hs -- python/sudoku-top95.txt
-Solved 95 of 95 puzzles (avg. 2.9449704842105264 secs (0.33956197705936436 Hz)).
+Solved 95 of 95 puzzles (avg. 0.5373875789473684 secs (1.8608543240965747 Hz)).
 
 cabal run exe:sudoku-hs -- python/sudoku-hardest.txt
-Solved 11 of 11 puzzles (avg. 5.9808e-2 secs (16.720171214553236 Hz)).
+Solved 11 of 11 puzzles (avg. 1.5199363636363638e-2 secs (65.79222814352275 Hz)).
 ```
 
 ### Averaged
 |           | Python | Haskell |
 |-----------|--------|---------|
-| time      | 0.003  | 1.004   |
-| frequency | 298    | 0.996   |
+| time      | 0.003  | 0.185   |
+| frequency | 298    | 5.398   |
 
 ## References
 * <https://wiki.haskell.org/Sudoku>
 * [Richard Bird, Functional pearl, a program to solve Sudoko.](https://www.cs.tufts.edu/~nr/cs257/archive/richard-bird/sudoku.pdf)
+* Bird R. A simple Sudoku solver. In: Thinking Functionally with Haskell. Cambridge University Press; 2014:89-109.
 * [Graham Hutton, Advanced functional programming, Sudoku code.](http://www.cs.nott.ac.uk/~gmh/sudoku.lhs)

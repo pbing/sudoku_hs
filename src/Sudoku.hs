@@ -45,12 +45,6 @@ chop :: Int -> [a] -> [[a]]
 chop _ [] = []
 chop n xs = take n xs : chop n (drop n xs)
 
-valid :: Grid -> Bool
-valid g =
-  all nodups (rows g)
-    && all nodups (cols g)
-    && all nodups (boxs g)
-
 nodups :: (Eq a) => [a] -> Bool
 nodups [] = True
 nodups (x : xs) = notElem x xs && nodups xs
@@ -114,8 +108,11 @@ expand :: Matrix Choices -> [Matrix Choices]
 expand m =
   [rows1 ++ [row1 ++ [c] : row2] ++ rows2 | c <- cs]
   where
-    (rows1, row : rows2) = span (all single) m
-    (row1, cs : row2) = span single row
+    (rows1,row:rows2) = break (any smallest) m
+    (row1,cs:row2)    = break smallest row
+    smallest c' = length c' == n
+    n = minimum (counts m)
+    counts = filter (/= 1) . map length . concat
 
 solve :: Grid -> [Grid]
 solve = search . prune . choices
